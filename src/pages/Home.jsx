@@ -6,6 +6,7 @@ import Sky from "../models/Sky";
 import Bird from "../models/Bird";
 import { Plane } from "@react-three/drei";
 import { useState } from "react";
+import HomeInfo from "../components/HomeInfo";
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
@@ -44,7 +45,9 @@ const Home = () => {
 
   return (
     <section className="relative w-full h-screen">
-      {/* <div className="absolute left-0 right-0 z-10 flex items-center justify-center top-28">POPUP</div> */}
+      <div className="absolute left-0 right-0 z-10 flex items-center justify-center top-28">
+        {currentStage && <HomeInfo currentStage={currentStage} />}
+      </div>
       <Canvas
         className={`w-full h-full bg-transparent ${isRotating ? "cursor-grabbing" : "cursor-grab"}`}
         camera={{ near: 0.1, far: 1000 }}
