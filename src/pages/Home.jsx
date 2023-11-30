@@ -4,7 +4,7 @@ import Loader from "../components/Loader";
 import Island from "../models/Island";
 import Sky from "../models/Sky";
 import Bird from "../models/Bird";
-import { Plane } from "@react-three/drei";
+import Plane from "../models/Plane";
 import { useState } from "react";
 import HomeInfo from "../components/HomeInfo";
 import sakura from "../assets/sakura.mp3";
